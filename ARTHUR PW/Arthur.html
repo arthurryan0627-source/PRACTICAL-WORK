@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Superman (2025) Movie</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    :root {
+      --primary-color: #0077cc;
+      --accent-color: #ff0000;
+      --bg-dark: #1e1e2f;
+      --light-gray: #f4f4f4;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light-gray);
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: var(--bg-dark);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: var(--accent-color);
+    }
+        /* 🔥 Intro Screen */
+#intro-screen {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/man.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 1s ease;
+}
+
+#intro-logo {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  animation: pulseLogo 2s infinite;
+}
+
+@keyframes pulseLogo {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}a
+    header {
+      background-image: url('images/Superman.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 3em;
+      animation: fadeInDown 2s ease;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+.video-header {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.video-container {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+}
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      color: var(--bg-dark);
+      margin-bottom: 20px;
+    }
+
+    ul {
+      line-height: 1.6;
+    }
+    .synopsis-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title-image {
+  max-width: 500px;
+  width: 90%;
+  height: auto;
+  margin-bottom: 30px;
+  filter: drop-shadow(0 0 10px rgba(0,0,0,0.2));
+}
+
+.synopsis-card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.synopsis-card p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+}
+.overview-section {
+  color: #333;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title-image {
+  max-width: 500px;
+  width: 90%;
+  height: auto;
+  margin-bottom: 30px;
+  filter: drop-shadow(0 0 10px rgba(0,0,0,0.2));
+}
+
+.overview-card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.overview-card ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.overview-card li {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.overview-card strong {
+  color: #0077cc;
+  font-weight: bold;
+}
+
+.overview-card span {
+  color: #333;
+}
+.poster-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.poster-heading {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #1e1e2f;
+  margin-bottom: 40px;
+  text-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.poster-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.poster-grid img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.poster-grid img:hover {
+  transform: scale(1.05);
+}
+
+.poster-link {
+  font-size: 1.1em;
+  margin-top: 10px;
+  color: #333;
+}
+
+.poster-link a {
+  color: #0077cc;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.poster-link a:hover {
+  color: #ff0000;
+}
+
+.cast-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.cast-heading {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #1e1e2f;
+  margin-bottom: 40px;
+  text-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.cast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+.cast-card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+    .cast-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .cast-member {
+      text-align: center;
+      max-width: 200px;
+    }
+
+    .cast-member img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .cast-member img:hover {
+      transform: scale(1.05);
+    }
+    .center-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.link-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 32px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #ff0000, #cc0000);
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.link-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.9);
+}
+
+    .trailer {
+      text-align: center;
+    }
+
+    .trailer iframe {
+      width: 100%;
+      max-width: 700px;
+      height: 400px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+   footer {
+      background-color: #f8f9fa;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div><a href="#">Superman (2025)</a></div>
+    <div>
+      <a href="#synopsis">synopsis</a>
+      <a href="#overview">Overview</a>
+      <a href="#posters">Posters</a>
+      <a href="#cast">Cast</a>
+      <a href="#trailer">Trailer</a>
+    </div>
+  </nav>
+
+  <!-- 🔥 Intro Screen -->
+  <div id="intro-screen">
+    <img src="images/sp.png" alt="Superman Logo" id="intro-logo">
+  </div>
+<header class="video-header">
+  <div class="video-overlay"></div>
+  <div class="video-container">
+    <iframe
+      src="https://www.youtube.com/embed/OfpXgjP4AOs?autoplay=1&mute=1&loop=1&playlist=OfpXgjP4AOs"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <div class="header-content">
+    <h1 class="animate__animated animate__fadeInDown"></h1>
+    <img src="images/tt.png" alt="Superman 2025 Logo" class="header-logo animate__animated animate__fadeInDown">
+  </div>
+</header>
+
+ <!-- 🔧 JavaScript for Intro Transition -->
+  <script>
+    const introScreen = document.getElementById("intro-screen");
+    const introLogo = document.getElementById("intro-logo");
+
+    introLogo.addEventListener("click", () => {
+      introScreen.style.opacity = "0";
+      setTimeout(() => {
+        introScreen.style.display = "none";
+      }, 1000); // matches transition duration
+    });
+  </script>
+  
+  <section id="synopsis" class="synopsis-section">
+    <h2>🦸‍♂️ Superman (2025)</h2>
+  <img src="images/Superman.jpg" alt="Movie Overview" class="section-title-image">
+  <div class="synopsis-card animate__animated animate__fadeInUp">
+    <p>
+In a reimagined DC Universe, Clark Kent grapples with his dual identity as a Kryptonian and a human raised on Earth. Guided by compassion and hope, he faces a rising threat that challenges his ideals and forces him to redefine what it means to be a hero. As Metropolis teeters on the edge of chaos, Superman must rise not just with strength, but with heart to inspire a fractured world.
+  </p>
+  </div>
+</section>
+
+<section id="overview" class="overview-section">
+  <div class="overview-header">
+  </div>
+  <div class="overview-card animate__animated animate__fadeInUp">
+    <ul>
+      <li><strong>Title:</strong> <span>Superman</span></li>
+      <li><strong>Release Date:</strong> <span>July 11, 2025 (US)</span></li>
+      <li><strong>Director:</strong> <span>James Gunn</span></li>
+      <li><strong>Starring:</strong> <span>David Corenswet, Rachel Brosnahan, Nicholas Hoult</span></li>
+      <li><strong>Studio:</strong> <span>DC Studios / Warner Bros. Pictures</span></li>
+      <li><strong>Genre:</strong> <span>Action, Superhero, Sci-Fi</span></li>
+      <li><strong>Plot:</strong> <span>A reimagined Superman driven by compassion and hope, navigating a new DC Universe with epic action and heart.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="posters" class="poster-section">
+  <h2 class="poster-heading animate__animated animate__fadeInDown">🖼️ Poster Highlights</h2>
+
+  <div class="poster-grid animate__animated animate__fadeInUp">
+    <img src="images/lookup.jpg" alt="Look Up Poster" />
+    <img src="images/krypto.jpg" alt="Superman & Krypto Poster" />
+    <img src="images/test.jpg" alt="Theatrical Logo Poster" />
+  </div>
+
+  <p class="poster-link">
+    Explore more at the <a href="https://shop.dc.com/collections/superman-posters" target="_blank">DC Shop</a>.
+  </p>
+</section>
+
+<section id="cast" class="cast-section">
+  <h2 class="cast-heading animate__animated animate__fadeInDown">🎭 Cast Gallery</h2>
+
+  <div class="cast-grid animate__animated animate__fadeInUp">
+    <div class="cast-card">
+      <img src="images/david.jpg" alt="David Corenswet">
+      <h3>David Corenswet</h3>
+      <p><em>Clark Kent / Superman</em></p>
+    </div>
+    <div class="cast-card">
+      <img src="images/rachel.jpg" alt="Rachel Brosnahan">
+      <h3>Rachel Brosnahan</h3>
+      <p><em>Lois Lane</em></p>
+    </div>
+    <div class="cast-card">
+      <img src="images/lex.jpg" alt="Nicholas Hoult">
+      <h3>Nicholas Hoult</h3>
+      <p><em>Lex Luthor</em></p>
+    </div>
+  </div>
+</section>
+
+<section id="official-site" class="center-section">
+  <h2>🌐 Official Website</h2>
+  <p>
+    Dive into the world of <strong>Superman (2025)</strong> — explore trailers, cast interviews, behind-the-scenes features, and ticket info.
+  </p>
+  <a class="link-button" href="https://www.supermanmovie.com/home/" target="_blank">🎟️ Go to Official Site</a>
+</section>
+
+  <section id="trailer" class="trailer">
+    <h2>🎞️ Watch the Trailer</h2>
+    <iframe src="https://www.youtube.com/embed/OfpXgjP4AOs?" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <footer>
+    &copy; 2025 created by Arthur | the best web designer🎬
+  </footer>
+
+</body>
+</html>
